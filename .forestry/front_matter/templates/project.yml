@@ -1,4 +1,18 @@
 ---
 label: Project
 hide_body: false
-fields: []
+fields:
+- name: link
+  type: text
+  config:
+    required: false
+  label: Link
+- name: date
+  type: datetime
+  label: Date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
