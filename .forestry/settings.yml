@@ -22,7 +22,7 @@ sections:
   label: Posts
   create: all
   match: "**/*.md"
-  new_doc_ext: '20190828104153'
+  new_doc_ext: ''
 - type: document
   path: src/data/bio.json
   label: Bio
