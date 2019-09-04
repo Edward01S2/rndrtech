@@ -2,6 +2,11 @@
 label: Project
 hide_body: false
 fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
 - name: link
   type: text
   config:
