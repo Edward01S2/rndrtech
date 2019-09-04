@@ -13,6 +13,11 @@ sections:
   templates:
   - page
 - type: directory
+  path: src/projects
+  label: Projects
+  create: all
+  match: "**/*.md"
+- type: directory
   path: src/posts
   label: Posts
   create: all
