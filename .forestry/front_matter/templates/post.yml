@@ -17,4 +17,4 @@ fields:
     time_format: 
     display_utc: false
 pages:
-- src/posts/my-first-post.20190904104630
+- src/posts/my-first-post.md
