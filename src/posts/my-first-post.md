@@ -17,8 +17,8 @@ The idea is that your HTML should only contain information about your _content_,
 
 Take a look at this HTML:
 
-    ```html
-    <p class="text-center">
-        Hello there!
-    </p>
-    ```
+``` html
+<p class="text-center">
+    Hello there!
+</p>
+```
