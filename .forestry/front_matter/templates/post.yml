@@ -25,5 +25,3 @@ fields:
     schema:
       format: markdown
   label: Excerpt
-pages:
-- src/posts/my-first-post.md
