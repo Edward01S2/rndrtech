@@ -1,11 +1,11 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
+import styled, { css } from 'styled-components'
+import tw from 'tailwind.macro'
 
-// Import typefaces
-import 'typeface-montserrat'
-import 'typeface-merriweather'
-
-import { rhythm } from '../utils/typography'
+const bioContent = css`
+  ${tw`text-xs mb-0 leading-tight text-gray-500 font-thin md:text-base`};
+`
 
 class Bio extends React.Component {
   render() {
@@ -21,23 +21,18 @@ class Bio extends React.Component {
           }
         `}
         render={data => (
-          <div
-            style={{
-              display: 'flex',
-              marginBottom: rhythm(2.5),
-            }}
+          <div className="flex flex-row items-center mb-8 md:mb-12"
           >
             <img
+              className="object-cover h-16 w-16 rounded-full mb-0"
               src={data.dataJson.profilePic}
               alt={data.dataJson.name}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                width: rhythm(2),
-                height: rhythm(2),
-              }}
             />
-            <div dangerouslySetInnerHTML={{ __html: data.dataJson.bio }} />
+            <div className="text-base pl-4 md:pl-4">
+              <h3 className="font-semibold leading-normal">{data.dataJson.name}</h3>
+              <p css={bioContent}>{data.dataJson.bio}</p>
+              <p css={bioContent}>{this.props.date}</p>
+            </div>
           </div>
         )}
       />

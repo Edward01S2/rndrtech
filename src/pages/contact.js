@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 
-class HomePage extends React.Component {
+class ContactPage extends React.Component {
   render() {
     const data = this.props.data.markdownRemark
 
@@ -15,7 +15,7 @@ class HomePage extends React.Component {
   }
 }
 
-export default HomePage
+export default ContactPage
 
 export const pageQuery = graphql`
   query {

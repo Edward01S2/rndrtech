@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 
-class HomePage extends React.Component {
+class ServicesPage extends React.Component {
   render() {
     const data = this.props.data.markdownRemark
 
@@ -15,11 +15,11 @@ class HomePage extends React.Component {
   }
 }
 
-export default HomePage
+export default ServicesPage
 
 export const pageQuery = graphql`
   query {
-    markdownRemark(frontmatter: { title: { eq: "Home" } }) {
+    markdownRemark(frontmatter: { title: { eq: "Services" } }) {
       html
     }
   }

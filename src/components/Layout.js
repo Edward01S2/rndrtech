@@ -1,71 +1,46 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react";
+import Helmet from "react-helmet";
+import { StaticQuery, graphql } from "gatsby";
 
-import { rhythm, scale } from '../utils/typography'
+import Nav from '../components/Nav'
 
-class Layout extends React.Component {
-  render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
+import "../css/style.scss";
 
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: 'Montserrat, sans-serif',
-            marginTop: 0,
-            marginBottom: rhythm(-1),
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
-    }
-    return (
-      <div
-        style={{
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        {header}
-        {children}
+const TemplateWrapper = ({ props, children }) => (
+  <StaticQuery
+    query={graphql`
+      query HeadingQuery {
+        site {
+          siteMetadata {
+            title
+            description
+          }
+        }
+      }
+    `}
+    render={data => (
+      <div>
+        <Helmet>
+          <html lang="en" />
+          <title>{data.site.siteMetadata.title}</title>
+          <meta
+            name="description"
+            content={data.site.siteMetadata.description}
+          />
+          <meta name="theme-color" content="#fff" />
+
+          <meta property="og:type" content="business.business" />
+          <meta property="og:title" content={data.site.siteMetadata.title} />
+          <meta property="og:url" content="/" />
+          <meta property="og:image" content="/img/og-image.jpg" />
+        </Helmet>
+        <div className={`px-8 py-6 md:px-16 md:py-12 lg:mx-auto lg:max-w-4xl lg:pl-32 lg:pt-20`}>
+          <Nav />
+          <div>{children}</div>
+        </div>
       </div>
-    )
-  }
-}
+    )}
+  />
+);
 
-export default Layout
+export default TemplateWrapper;

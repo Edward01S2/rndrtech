@@ -12,14 +12,11 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(
         `
           {
-            allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
+            projects:allMarkdownRemark(filter: {fileAbsolutePath: {glob: "**/src/posts/*.md"}}) {
               edges {
                 node {
                   fields {
                     slug
-                  }
-                  frontmatter {
-                    title
                   }
                 }
               }
@@ -32,23 +29,33 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
 
-        // Create blog posts pages.
-        const posts = result.data.allMarkdownRemark.edges;
-
-        _.each(posts, (post, index) => {
-          const previous = index === posts.length - 1 ? null : posts[index + 1].node;
-          const next = index === 0 ? null : posts[index - 1].node;
-
+        result.data.projects.edges.forEach(({ node }) => {
           createPage({
-            path: post.node.fields.slug,
+            path: `/articles${node.fields.slug}`,
             component: blogPost,
             context: {
-              slug: post.node.fields.slug,
-              previous,
-              next,
+              slug: node.fields.slug,
             },
           })
         })
+
+        // Create blog posts pages.
+        // const posts = result.data.allMarkdownRemark.edges;
+
+        // _.each(posts, (post, index) => {
+        //   const previous = index === posts.length - 1 ? null : posts[index + 1].node;
+        //   const next = index === 0 ? null : posts[index - 1].node;
+
+        //   createPage({
+        //     path: post.node.fields.slug,
+        //     component: blogPost,
+        //     context: {
+        //       slug: post.node.fields.slug,
+        //       previous,
+        //       next,
+        //     },
+        //   })
+        // })
       })
     )
   })
@@ -65,4 +72,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     })
   }
+}
+
+exports.onCreateWebpackConfig = ({ getConfig }) => {
+  const config = getConfig()
+  config.node = {
+    fs: 'empty',
+  };
 }
