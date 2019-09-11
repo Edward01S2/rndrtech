@@ -23,7 +23,7 @@ a {
 
 /* purgecss ignore */
 .active {
-  @apply text-black;
+  @apply text-black !important;
 }
 
 @tailwind utilities;
