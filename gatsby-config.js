@@ -48,7 +48,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 800,
             },
           },
           {
@@ -78,19 +78,26 @@ module.exports = {
       },
     },
     'gatsby-plugin-styled-components',
-    `gatsby-plugin-feed`,
+    // `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `rndr.tech`,
+        short_name: `rndr`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/assets/gatsby-icon.png`,
+        // theme_color: `#663399`,
+        // icon: `src/assets/gatsby-icon.png`,
       },
     },
+    {
+      resolve:'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
+      options: {
+        //develop: true,            // Activates purging in npm run develop
+        tailwind: true,
+        purgeOnly: ['src/css/style.scss'], // Purge only tailwind
+      },
+    }, // must be after other CSS plugins
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     'gatsby-transformer-json',
