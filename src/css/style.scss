@@ -1,6 +1,5 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
 body, h1, h2, h3, h4 {
   @apply font-sans;
@@ -26,3 +25,5 @@ a {
 .active {
   @apply text-black;
 }
+
+@tailwind utilities;

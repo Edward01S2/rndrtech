@@ -25,11 +25,11 @@ class BlogPostTemplate extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${post.frontmatter.title} | ${siteTitle}`}
         />
-        <Bio date={post.frontmatter.date} />
         <h1 className="text-4xl font-bold">{post.frontmatter.title}</h1>
+        <Bio date={post.frontmatter.date} />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr className="mt-8 pb-2" />
-        <div className="flex flex-wrap justify-center md:flex-row">
+        <div className="flex flex-wrap justify-center md:flex-row md:justify-start md:-ml-4">
           <Link to={'/'} css={navItem}>
             Home
           </Link>
