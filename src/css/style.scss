@@ -22,6 +22,7 @@ a {
   @apply text-black cursor-pointer font-bold shadow-none underline;
 }
 
+/* purgecss ignore */
 .active {
   @apply text-black;
 }
