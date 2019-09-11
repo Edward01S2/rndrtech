@@ -78,16 +78,16 @@ module.exports = {
       },
     },
     'gatsby-plugin-styled-components',
+    `gatsby-plugin-catch-links`,
     // `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `rndr.tech`,
+        name: `rndr`,
         short_name: `rndr`,
         start_url: `/`,
         background_color: `#ffffff`,
-        // theme_color: `#663399`,
-        // icon: `src/assets/gatsby-icon.png`,
+        icon: `src/assets/favicon.png`,
       },
     },
     {
