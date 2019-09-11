@@ -21,3 +21,7 @@ p {
 a {
   @apply text-black cursor-pointer font-bold shadow-none underline;
 }
+
+.active {
+  @apply text-black;
+}

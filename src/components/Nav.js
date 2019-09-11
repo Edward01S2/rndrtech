@@ -9,8 +9,6 @@ const navItem = css`
   ${tw`no-underline shadow-none py-6 text-lg hover:text-black md:uppercase md:pr-8 md:text-sm md:text-gray-500 md:font-semibold md:tracking-wider md:py-4`};
 `
 
-const active = "text-black"
-
 const HamburgerStyled = styled(HamburgerCollapse)`
   ${tw`pb-0 px-0 outline-none border-0 focus:outline-none focus:border-0`};
 `
@@ -55,16 +53,16 @@ function Nav() {
       <Menu id="navMenu" className={`${open ? 'block' : 'hidden md:block'}`}>
         <div className="relative h-full pt-16 pl-8 md:pt-0 md:pl-0">
           <div className="h-full flex flex-col md:flex-row">
-            <Link to={'/projects'} activeClassName={active} css={navItem}>
+            <Link to={'/projects'} activeClassName="active" css={navItem}>
               Projects
             </Link>
-            <Link to={'/services'}  activeClassName={active} css={navItem}>
+            <Link to={'/services'}  activeClassName="active" css={navItem}>
               Services
             </Link>
-            <Link to={'/articles'}  activeClassName={active} css={navItem}>
+            <Link to={'/articles'}  activeClassName="active" css={navItem}>
               Articles
             </Link>
-            <Link to={'/contact'}  activeClassName={active} css={navItem}>
+            <Link to={'/contact'}  activeClassName="active" css={navItem}>
               Contact
             </Link>
           </div>

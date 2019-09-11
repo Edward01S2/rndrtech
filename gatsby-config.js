@@ -96,6 +96,7 @@ module.exports = {
         //develop: true,            // Activates purging in npm run develop
         tailwind: true,
         purgeOnly: ['src/css/style.scss'], // Purge only tailwind
+        whitelist: ['active'],
       },
     }, // must be after other CSS plugins
     `gatsby-plugin-offline`,
