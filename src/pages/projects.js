@@ -56,8 +56,7 @@ export const pageQuery = graphql`
       html
     }
     proj: allMarkdownRemark(
-      filter: { fileAbsolutePath: { glob: "**/src/projects/*.md" } }
-      limit: 7
+      filter: { fileAbsolutePath: { glob: "**/src/projects/*.md" } }, sort: {fields: frontmatter___date, order: DESC}
     ) {
       edges {
         node {
