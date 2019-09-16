@@ -22,6 +22,7 @@ fields:
     time_format: 
     display_utc: false
 pages:
+- src/projects/lake-murray-osprey.md
 - src/projects/mycambridge.md
 - src/projects/ta-eye-care.md
 - src/projects/thinktank.md
