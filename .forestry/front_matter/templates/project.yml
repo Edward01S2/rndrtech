@@ -22,5 +22,6 @@ fields:
     time_format: 
     display_utc: false
 pages:
+- src/projects/mycambridge.md
 - src/projects/ta-eye-care.md
 - src/projects/thinktank.md
