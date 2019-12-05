@@ -22,11 +22,12 @@ fields:
     time_format: 
     display_utc: false
 pages:
-- src/projects/freedom-park.md
-- src/projects/mcconnell-air-force-base-library.md
-- src/projects/mbt-consulting.md
+- src/projects/onec1ty-nashville.md
 - src/projects/camp-sweeney.md
 - src/projects/pattinan-monogramming.md
+- src/projects/mbt-consulting.md
+- src/projects/mcconnell-air-force-base-library.md
+- src/projects/freedom-park.md
 - src/projects/lake-murray-osprey.md
 - src/projects/nail-safari.md
 - src/projects/mycambridge.md
