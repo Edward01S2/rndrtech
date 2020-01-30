@@ -1,7 +1,7 @@
 ---
-link: http://www.thinktankcounseling.com/
-date: 2019-09-04T05:00:00.000+00:00
-title: Think Tank Counseling
+link: https://liftcoalition.com
+date: 2020-01-15T00:00:00-06:00
+title: LIFT Coalition
 
 ---
-A custom **WordPress** website created for Think Tank, who specializes in holistic treatment plans for mental health, addiction, and dual recovery. It was built with **Sage Roots** and **Tailwind CSS** on the frontend and a **ACF** based backend.
+A custom **WordPress** website created for the LIFT Coalition, a non-profit working to promote the interests of small businesses throughout America. It was built with **Sage Roots** and **Tailwind CSS** and a **ACF** based backend.
