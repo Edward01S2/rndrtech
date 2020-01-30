@@ -22,14 +22,15 @@ fields:
     time_format: 
     display_utc: false
 pages:
-- src/projects/onec1ty-nashville.md
 - src/projects/camp-sweeney.md
-- src/projects/pattinan-monogramming.md
-- src/projects/mbt-consulting.md
-- src/projects/mcconnell-air-force-base-library.md
 - src/projects/freedom-park.md
 - src/projects/lake-murray-osprey.md
-- src/projects/nail-safari.md
+- src/projects/mbt-consulting.md
+- src/projects/mcconnell-air-force-base-library.md
 - src/projects/mycambridge.md
+- src/projects/nail-safari.md
+- src/projects/onec1ty-nashville.md
+- src/projects/pattinan-monogramming.md
 - src/projects/ta-eye-care.md
+- src/projects/think-tank-counseling.md
 - src/projects/thinktank.md

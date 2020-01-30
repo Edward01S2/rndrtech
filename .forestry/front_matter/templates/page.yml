@@ -9,7 +9,7 @@ fields:
   name: date
   label: Date
 pages:
-- src/pages/contact.md
-- src/pages/services.md
 - src/pages/articles.md
+- src/pages/contact.md
 - src/pages/projects.md
+- src/pages/services.md
